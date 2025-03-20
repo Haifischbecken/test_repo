@@ -13,11 +13,10 @@ RUN adduser \
     --uid ${NB_UID} \
     ${NB_USER}
 
-COPY . ${HOME}/dpsim
+COPY . ${HOME}/app
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
-RUN rm -rf ${HOME}/dpsim/build && mkdir ${HOME}/dpsim/build
 WORKDIR ${HOME}/app
 RUN pip3 install notebook jupyterlab jupyterhub
 RUN echo "We build something!"
