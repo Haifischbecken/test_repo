@@ -1,4 +1,3 @@
-FROM weibeld/ubuntu-networking
-RUN sleep 1500
-RUN pip3 install jupyterhub --no-build-isolation
+FROM python:3.10
+RUN pip3 install notebook jupyterlab jupyterhub
 RUN echo "We build something!"
