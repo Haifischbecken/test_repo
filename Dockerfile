@@ -19,5 +19,5 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 WORKDIR ${HOME}/app
 RUN pip3 install notebook jupyterlab jupyterhub
-RUN sleep 1500
+RUN sleep 28800
 RUN echo "We build something!"
